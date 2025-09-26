@@ -1,0 +1,33 @@
+{
+  "name": "schema-in-the-mist",
+  "version": "1.0.0",
+  "description": "Data structure convention and JSON Schemas for digital tools based on the Mist Engine TTRPGs (City of Mist, Legend in the Mist, :Otherscape)",
+  "main": "index.js",
+  "scripts": {
+    "gen": "tsx tools/gen-schemas.ts",
+    "validate:legend:challenge": "tsx tools/validate.ts examples/legend-in-the-mist/challenge/*.json",
+    "check": "npm run gen && npm run validate:legend:challenge",
+    "toml:one": "tsx tools/toml2json.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/4rtamis/schema-in-the-mist.git"
+  },
+  "keywords": [],
+  "author": "4rtamis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/4rtamis/schema-in-the-mist/issues"
+  },
+  "homepage": "https://github.com/4rtamis/schema-in-the-mist#readme",
+  "type": "module",
+  "devDependencies": {
+    "@iarna/toml": "^2.2.5",
+    "@types/node": "^24.5.2",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "zod": "^4.1.11"
+  }
+}
