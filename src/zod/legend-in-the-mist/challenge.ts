@@ -158,7 +158,7 @@ export const ThreatSchema = z
       .min(1, "At least one Consequence is required")
       .meta({
         description:
-          "List of concrete, referenceable outcomes the Threat can deliver.",
+          "List of concrete, referenceable outcomes the Threat can deliver. Supports inline Markdown.",
       }),
   })
   .meta({
@@ -318,7 +318,7 @@ export const LegendInTheMistChallengeSchema = z
       .optional()
       .meta({
         description:
-          "Describe the Challenge's features and its condition upon entering the scene.",
+          "Describe the Challenge's features and its condition upon entering the scene. Supports inline Markdown.",
       }),
     mights: z.array(MightSchema).optional().meta({
       description:
@@ -347,7 +347,7 @@ export const LegendInTheMistChallengeSchema = z
       .optional()
       .meta({
         description:
-          "Describe the actions the Challenge can generally take when a Hero's action generates Consequences.",
+          "Describe the actions the Challenge can generally take when a Hero's action generates Consequences. Supports inline Markdown.",
       }),
     special_features: z.array(SpecialFeatureSchema).optional().meta({
       description:

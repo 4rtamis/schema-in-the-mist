@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "http://json-schema.org/draft-07/schema#",
   "description": "Legend in the Mist - Challenge profile, used to represent NPCs and situations that pose a threat to the Heroes, their Quests, or their goals.",
   "type": "object",
   "properties": {
@@ -50,7 +50,7 @@
       }
     },
     "tags_and_statuses": {
-      "description": "Describe the Challenge's features and its condition upon entering the scene.",
+      "description": "Describe the Challenge's features and its condition upon entering the scene. Supports inline Markdown.",
       "type": "array",
       "items": {
         "description": "Story tags and statuses belonging to the Challenge upon entering the scene. Supports inline Markdown.",
@@ -215,7 +215,7 @@
             "maxLength": 100
           },
           "consequences": {
-            "description": "List of concrete, referenceable outcomes the Threat can deliver.",
+            "description": "List of concrete, referenceable outcomes the Threat can deliver. Supports inline Markdown.",
             "minItems": 1,
             "type": "array",
             "items": {
@@ -239,7 +239,7 @@
       }
     },
     "general_consequences": {
-      "description": "Describe the actions the Challenge can generally take when a Hero's action generates Consequences.",
+      "description": "Describe the actions the Challenge can generally take when a Hero's action generates Consequences. Supports inline Markdown.",
       "type": "array",
       "items": {
         "description": "Action the Challenge might take when a Hero's action generates Consequences, regardless of Threat. Supports inline Markdown.",
